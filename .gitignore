@@ -1,0 +1,16 @@
+# Rust build output
+/target/
+
+# Output directories
+gp_results/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Misc
+.env
+*.swp
+.DS_Store
