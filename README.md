@@ -1,4 +1,4 @@
-# rust_gp
+# rust-gp
 
 Multi-band Gaussian-process light-curve fitter: a Matérn-3/2 GP whose exact
 likelihood is evaluated by a Kalman filter in O(n), fitted by MAP with L-BFGS
@@ -146,7 +146,7 @@ print(10**th["log_temp_peak"], th["cooling_rate"], th["cooling_rate_err"])
 ## Build & install the Python extension
 
 ```bash
-cd rust_gp
+cd rust-gp
 pip install maturin
 maturin develop --release --features python
 python -c "import rust_gp; print(dir(rust_gp))"   # ['fit', 'fit_many', 'predict', ...]
@@ -212,7 +212,7 @@ mean_r, std_r = rust_gp.predict(res, t.tolist(), "r")
 
 ```toml
 [dependencies]
-rust_gp = { git = "https://github.com/frenbox/rust_gp.git" }
+rust-gp = { git = "https://github.com/frenbox/rust-gp.git" }
 ```
 
 ```rust
@@ -306,7 +306,7 @@ cargo run --release --bin fit-bench -- path/to/photometry_dir --threads 1,8,32
 ## Project structure
 
 ```
-rust_gp/
+rust-gp/
 ├── Cargo.toml
 ├── src/
 │   ├── lib.rs               # CSV loading, preparation, priors, fit driver, PyO3

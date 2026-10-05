@@ -1,5 +1,5 @@
 [package]
-name = "rust_gp"
+name = "rust-gp"
 version = "0.1.0"
 edition = "2021"
 description = "Multi-band Matérn-3/2 Gaussian-process light-curve fitter using an exact O(n) Kalman likelihood and L-BFGS"
